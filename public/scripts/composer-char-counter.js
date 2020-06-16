@@ -5,6 +5,11 @@ $(document).ready(function() {
     const counterVal = 140 - charLength;
     const counter = $(this).closest("form").find(".counter");
     counter.val(counterVal);
+    if (counterVal < 0) {
+      counter.addClass("limit-exceeded");
+    } else {
+      counter.removeClass("limit-exceeded")
+    }
     console.log(counterVal);
     
 
