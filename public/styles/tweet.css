@@ -1,0 +1,35 @@
+.tweet-container {
+  width:100%;
+}
+
+article.tweet {
+  width:100%;
+  border-style: solid;
+  border-color:  #545149;
+  border-width: medium;
+  margin-top:1em;
+  padding: 0.5em;
+}
+
+article.tweet header {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ .userInfo {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.userName {
+  margin-left:15px;
+}
+
+.userHandler {
+  color:gray;
+  font-weight:600;
+}
