@@ -1,0 +1,13 @@
+header {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:400px;
+  width: inherit;
+
+  background-color: #e39700;
+  background-image: url("../images/header-transparent-background.png");
+
+
+}
