@@ -1,0 +1,36 @@
+.new-tweet {
+  display:flex;
+  flex-direction: column;
+  background-color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  margin:auto;
+
+}
+
+#tweet-text {
+  background: transparent;
+
+}
+
+
+
+form > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.new-tweet>form > div > button {
+  font-family: 'Bungee',sans-serif;
+  background-color: #4056A1;
+  color: #FFFFFFFF;
+
+}
+
+.new-tweet>form > div > output {
+  font-family: 'Bungee',sans-serif;
+  
+
+}
