@@ -27,9 +27,28 @@ article.tweet header {
 
 .userName {
   margin-left:15px;
+  font-weight:300;
 }
 
 .userHandler {
   color:gray;
   font-weight:600;
+}
+
+article.tweet p {
+  font-weight: 500;
+
+}
+
+article.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top-style: solid;
+  border-top-width: medium;
+  border-color:  #545149;
+}
+
+.userReaction {
+  color:#4056A1;
 }
