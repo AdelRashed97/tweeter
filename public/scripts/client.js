@@ -62,7 +62,21 @@ $(document).ready(function() {
   };
 
 
-  renderTweets(data)
+  renderTweets(data);
+
+  $("form").on("submit",function(event) {
+    event.preventDefault();
+    $.ajax(
+      {
+        method:"Post",
+        url: "/tweets",
+        data:$(this).serialize(),
+  
+  
+      }
+    );
+
+  });
   
 
 
