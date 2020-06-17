@@ -30,9 +30,14 @@ article.tweet header {
   font-weight:300;
 }
 
-.userHandler {
+ .userHandler {
+   display: none;
   color:gray;
   font-weight:600;
+}
+
+article.tweet:hover .userHandler{
+  display: block;
 }
 
 article.tweet p {
