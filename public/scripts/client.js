@@ -52,19 +52,29 @@ $(document).ready(function() {
 
   $("form").on("submit",function(event) {
     event.preventDefault();
-    $.ajax(
-      {
-        method:"Post",
-        url: "/tweets",
-        data:$(this).serialize(),
-  
-  
-      }
-    );
 
-    const tweetBox = $(this).find("#tweet-text");
-    tweetBox.val("");
-    tweetBox.focus();
+    const tweet = $(this).find("#tweet-text").val();
+    if (tweet === "" || tweet === null) {
+      alert("Cannot submit an empty tweet");
+
+    } else if (tweet.length > 140) {
+      alert("Tweet can not exceed 140 characters");
+    } else {
+
+      $.ajax(
+        {
+          method:"Post",
+          url: "/tweets",
+          data:$(this).serialize(),
+    
+    
+        }
+      );
+  
+      const tweetBox = $(this).find("#tweet-text");
+      tweetBox.val("");
+      tweetBox.focus();
+    }
 
   });
   
