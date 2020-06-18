@@ -43,7 +43,12 @@ $(document).ready(function() {
       method:"GET",
       url:"/tweets",
       dataType:"json"
-    }).then((data)=>renderTweets(data));
+    }).then((data) =>{
+      $("#tweet-container").empty();
+      return data;
+    })
+      .then((data)=>renderTweets(data));
+      
 
   };
 
@@ -69,7 +74,7 @@ $(document).ready(function() {
     
     
         }
-      );
+      ).then(() => loadTweets());
   
       const tweetBox = $(this).find("#tweet-text");
       tweetBox.val("");
