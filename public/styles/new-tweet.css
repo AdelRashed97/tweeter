@@ -52,3 +52,11 @@
 .limit-exceeded {
   color:red;
 }
+
+
+#error-message {
+  background-color: red;
+  color:white;
+  border-radius: 1em;
+  padding: 0.5em;
+}
