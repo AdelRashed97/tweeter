@@ -55,14 +55,24 @@ $(document).ready(function() {
   };
   
   const renderTweets = function(tweetsArr) {
+    tweetsArr.reverse(); // now first element is the latest tweet
     for (const tweet of tweetsArr) {
       $("#tweet-container").append(createTweetElement(tweet));
 
     }
   };
 
+  const loadTweets = function() {
+    $.ajax({
+      method:"GET",
+      url:"/tweets",
+      dataType:"json"
+    }).then((data)=>renderTweets(data));
 
-  renderTweets(data);
+  };
+
+  loadTweets();
+
 
   $("form").on("submit",function(event) {
     event.preventDefault();
