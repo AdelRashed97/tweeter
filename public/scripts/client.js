@@ -65,15 +65,15 @@ $(document).ready(function() {
 
   $("form").on("submit",function(event) {
     event.preventDefault();
-    $(".error-message").slideUp();
+    $("#error-message").slideUp();
 
     const tweet = $(this).find("#tweet-text").val();
     if (tweet === "" || tweet === null) {
-      $(".error-message").empty().append(`<i class="fas fa-times fa-xs"></i> Cannot submit an empty tweet`).slideDown();
+      $("#error-message").empty().append(`<i class="fas fa-times fa-xs"></i> Cannot submit an empty tweet`).slideDown();
 
 
     } else if (tweet.length > 140) {
-      $(".error-message").empty().append(`<i class="fas fa-times fa-xs"></i> Tweet can not exceed 140 characters`).slideDown();
+      $("#error-message").empty().append(`<i class="fas fa-times fa-xs"></i> Tweet can not exceed 140 characters`).slideDown();
       
     } else {
 
