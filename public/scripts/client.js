@@ -20,7 +20,7 @@ $(document).ready(function() {
       </div>
       <span class="userHandler">${tweetData.user.handle}</span>
     </header>
-    <p> ${tweetData.content.text}</p>
+    <p> ${escape(tweetData.content.text)}</p>
   
     <footer>
      <span class="date">${moment(tweetData["created_at"]).fromNow()} </span>
