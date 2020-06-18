@@ -5,6 +5,9 @@
  */
 
 $(document).ready(function() {
+
+  
+
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -62,13 +65,16 @@ $(document).ready(function() {
 
   $("form").on("submit",function(event) {
     event.preventDefault();
+    $(".error-message").slideUp();
 
     const tweet = $(this).find("#tweet-text").val();
     if (tweet === "" || tweet === null) {
-      alert("Cannot submit an empty tweet");
+      $(".error-message").empty().append(`<i class="fas fa-times fa-xs"></i> Cannot submit an empty tweet`).slideDown();
+
 
     } else if (tweet.length > 140) {
-      alert("Tweet can not exceed 140 characters");
+      $(".error-message").empty().append(`<i class="fas fa-times fa-xs"></i> Tweet can not exceed 140 characters`).slideDown();
+      
     } else {
 
       $.ajax(
