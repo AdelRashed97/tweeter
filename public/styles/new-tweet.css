@@ -61,3 +61,8 @@
   border-radius: 1em;
   padding: 0.25em;
 }
+
+/* hidden class to initially hide error message when loading*/
+.hidden {
+  display: none;
+}
