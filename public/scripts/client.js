@@ -5,8 +5,8 @@
  */
 
 $(document).ready(function() {
-
-  
+// use jquery hide method to keep the error message hidden
+  $("#error-message").hide().removeClass("hidden");
 
   const escape =  function(str) {
     let div = document.createElement('div');
