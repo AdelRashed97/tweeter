@@ -40,4 +40,7 @@ body {
      grid-template-columns: 25vw 50vw;
      justify-content: space-around;
    }
+   #header-container,#main-container {
+     margin-top:10vh;
+   }
  }
