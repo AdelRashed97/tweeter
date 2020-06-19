@@ -35,12 +35,11 @@ article.tweet header {
 }
 
  .userHandler {
-   display: none;
   color:gray;
   font-weight:600;
 }
 
-article.tweet:hover .userHandler{
+article.tweet:hover .userReaction{
   display: block;
 }
 
@@ -59,5 +58,6 @@ article.tweet footer {
 }
 
 .userReaction {
+  display:none;
   color:#4056A1;
 }
