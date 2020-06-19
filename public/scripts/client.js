@@ -90,6 +90,8 @@ $(document).ready(function() {
       const tweetBox = $(this).find("#tweet-text");
       tweetBox.val("");
       tweetBox.focus();
+      //clear counter
+      $(".counter").text(140);
     }
 
   });
