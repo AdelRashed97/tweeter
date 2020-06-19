@@ -10,7 +10,7 @@ $(document).ready(function() {
     } else {
       counter.removeClass("limit-exceeded")
     }
-    console.log(counterVal);
+    
     
 
     
